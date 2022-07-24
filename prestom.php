@@ -175,7 +175,7 @@
         {
             $omOption = new \PrestaShop\PrestaShop\Core\Payment\PaymentOption();
             $omOption->setCallToActionText($this->l('Pay with Orange Money'))
-                        ->setAction($this->context->link->getModuleLink($this->name, 'tokencontroller', array(), true))
+                        ->setAction($this->context->link->getModuleLink($this->name, 'tokenaction', array(), true))
                         ->setAdditionalInformation($this->context->smarty->fetch('module:prestom/views/templates/front/payment_infos.tpl'));
             return $omOption;
         }
