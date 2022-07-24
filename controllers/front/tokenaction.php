@@ -6,6 +6,6 @@
         public function initContent()
         {
             parent::initContent();
-            echo "you are in token action";
+            echo "you are in token action !";
         }
     }
