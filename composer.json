@@ -1,0 +1,27 @@
+{
+    "name": "prestashop/prestom",
+    "description": "PrestaShop module for Orange Money payment",
+    "homepage": "https://github.com",
+    "license": "AFL-3.0",
+    "authors": [
+      {
+        "name": "njammy",
+        "email": "njammypatchakwejovani@gmail.com"
+      }
+    ],
+    "require": {
+      "php": ">=5.3.2",
+      "guzzlehttp/guzzle": "^7.4"
+    },
+    "autoload": {
+      "psr-4": {
+          "prestom\\": "src/"
+      }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "prepend-autoloader": false
+    },
+    "type": "prestashop-module"
+  }
+  
