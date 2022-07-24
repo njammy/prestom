@@ -150,11 +150,28 @@
             }
             if (!$this->checkCurrency($params['cart'])) {
                 return;
-            }
-            $payment_options = [
-                $this->getOmPaymentOption(),
-            ];
+            } 
+            $formAction = $this->context->link->getModuleLink($this->name, 'validation', array(), true);
+            $this->smarty->assign(['action' => $formAction]);
+            $paymentForm = $this->fetch('module:prestom/views/templates/front/payment_infos.tpl');
+            $newOption = new \PrestaShop\PrestaShop\Core\Payment\PaymentOption;
+            $newOption->setModuleName($this->displayName)
+                ->setCallToActionText('Pay With Orange Money')
+                ->setAction($formAction)
+                ->setAdditionalInformation($paymentForm);
+     
+            $payment_options = array(
+                $newOption
+            );
             return $payment_options;
+        }
+
+        public function hookPaymentReturn($params)
+        {
+            if (!$this->active) {
+                return;
+            }
+            return $this->fetch('module:prestapay/views/templates/front/payment_return.tpl');
         }
 
         public function checkCurrency($cart)
@@ -169,14 +186,5 @@
                 }
             }
             return false;
-        }
-
-        public function getOmPaymentOption()
-        {
-            $omOption = new \PrestaShop\PrestaShop\Core\Payment\PaymentOption();
-            $omOption->setCallToActionText($this->l('Pay with Orange Money'))
-                        ->setAction($this->context->link->getModuleLink($this->name, 'tokenaction', array(), true))
-                        ->setAdditionalInformation($this->context->smarty->fetch('module:prestom/views/templates/front/payment_infos.tpl'));
-            return $omOption;
         }
     }
