@@ -1,8 +1,9 @@
+<p align="center">
+  <img src="./demo_img/banner.png" position="center">
+</p>
 # PRESTOM
 
 ## _Prestashop module for Orange Money web payment in Central Africa_
-
-![Prestom Logo](./logo.png)
 
 Prestom is a basic prestahop module which allow shop owner to integrate Orange Money web payment on platform.
 
