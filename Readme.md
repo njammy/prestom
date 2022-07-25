@@ -44,6 +44,7 @@ Prestom is compatible with Prestashop 1.7.8.6
     Requirement env
     - PHP VERSION 7.3.23
     - COMPOSER VERSION 2.3.9
+    - PRESTASHOP VERSION 1.7.8.6
 
 Clone the repos
 ```sh
