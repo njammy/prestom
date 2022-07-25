@@ -41,6 +41,10 @@ Prestom is compatible with Prestashop 1.7.8.6
 
 ## FOR DEVELOPER
 
+    Requirement env
+    - PHP VERSION 7.3.23
+    - COMPOSER VERSION 2.3.9
+
 Clone the repos
 ```sh
 git clone https://github.com/njammy/prestom.git
@@ -51,9 +55,13 @@ Setup and load dependencies
 cd prestom && composer install && composer dump-autoload
 ```
 
+## Author
+
+- njammy
 
 ## License
 
-MIT
+- MIT
+
 
 **Free Software, Hell Yeah!**
