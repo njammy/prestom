@@ -64,6 +64,6 @@ cd prestom && composer install && composer dump-autoload
 
 ## License
 
-- MIT
+- [MIT](./LICENSE)
 
 **Free Software, Hell Yeah!**
