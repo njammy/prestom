@@ -57,11 +57,10 @@ cd prestom && composer install && composer dump-autoload
 
 ## Author
 
-- njammy
+- [njammy](https://github.com/njammy)
 
 ## License
 
 - MIT
-
 
 **Free Software, Hell Yeah!**
